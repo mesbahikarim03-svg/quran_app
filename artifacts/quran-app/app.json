@@ -61,6 +61,12 @@
     "experiments": {
       "typedRoutes": true,
       "reactCompiler": true
-    }
+    },
+    "extra": {
+      "eas": {
+        "projectId": "c3df65b3-3d2a-4340-b0a5-9294790512e8"
+      }
+    },
+    "owner": "krimoss"
   }
 }
