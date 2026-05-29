@@ -1,4 +1,4 @@
-const isEASBuild = process.env.EAS_BUILD === 'true';
+const isEASBuild = !!process.env.EAS_BUILD;
 
 const plugins = isEASBuild
   ? [
