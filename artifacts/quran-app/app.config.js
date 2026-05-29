@@ -1,28 +1,3 @@
-const isEASBuild = !!process.env.EAS_BUILD;
-
-const plugins = isEASBuild
-  ? [
-      ['expo-router', { origin: 'https://replit.com/' }],
-      'expo-font',
-      'expo-web-browser',
-      [
-        'expo-location',
-        {
-          locationAlwaysAndWhenInUsePermission:
-            'يحتاج التطبيق إلى موقعك لتحديد مواقيت الصلاة بدقة',
-        },
-      ],
-      [
-        'expo-notifications',
-        {
-          icon: './assets/images/icon.png',
-          color: '#2A9D5C',
-          sounds: [],
-        },
-      ],
-    ]
-  : [];
-
 module.exports = {
   expo: {
     name: 'القرآن الكريم',
@@ -62,7 +37,26 @@ module.exports = {
       ],
     },
     web: { favicon: './assets/images/icon.png' },
-    plugins,
+    plugins: [
+      ['expo-router', { origin: 'https://replit.com/' }],
+      'expo-font',
+      'expo-web-browser',
+      [
+        'expo-location',
+        {
+          locationAlwaysAndWhenInUsePermission:
+            'يحتاج التطبيق إلى موقعك لتحديد مواقيت الصلاة بدقة',
+        },
+      ],
+      [
+        'expo-notifications',
+        {
+          icon: './assets/images/icon.png',
+          color: '#2A9D5C',
+          sounds: [],
+        },
+      ],
+    ],
     experiments: { typedRoutes: true },
     extra: {
       eas: { projectId: 'c3df65b3-3d2a-4340-b0a5-9294790512e8' },
